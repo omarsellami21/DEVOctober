@@ -5,6 +5,17 @@ import products from "./src/data/products";
 export default function App() {
   return (
     <View style={styles.container}>
+      <FlatList
+        data={products}
+        renderItem={({ item }) => (
+          <Image
+            source={{
+              uri: "https://notjustdev-dummy.s3.us-east-2.amazonaws.com/nike/nike1.png",
+            }}
+            style={styles.Image}
+          />
+        )}
+      />
       <StatusBar style="auto" />
     </View>
   );
